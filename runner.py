@@ -8,7 +8,7 @@ def csv_reader(file_obj):
 		a,b,c=str(row).split(",")
 		a=a.split('"')[0]
 		c=c.split('"')[0]
-		r=requests.post("https://hooks.zapier.com/hooks/catch/3120866/kplm71/?temperature="+b+"&moisture="+c+"&light="+a+"&warning=10")
+		r=requests.post("https://hooks.zapier.com/hooks/catch/3120866/kplm71/?temperature="+b+"&moisture="+c+"&light="+a+"&warning=10", timeout=60)
 		print(r.status_code, r.reason)	
 		time.sleep(5)
 		bb=bb+1
