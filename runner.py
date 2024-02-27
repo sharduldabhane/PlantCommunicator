@@ -11,8 +11,7 @@ def csv_reader(file_obj):
 		r=requests.post("https://hooks.zapier.com/hooks/catch/3120866/kplm71/?temperature="+b+"&moisture="+c+"&light="+a+"&warning=10")
 		print(r.status_code, r.reason)	
 		time.sleep(5)
-		bb=bb+1
-		if bb==2:
+		if (bb := bb+1)==2:
 			print("Great job shardul")
 			break	
 if __name__=="__main__":
